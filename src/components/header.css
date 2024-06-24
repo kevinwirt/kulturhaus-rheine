@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10000;
+}
+
+.header nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Abstand zwischen den Buttons */
+}
+
+.header nav button {
+    background-color: rgba(255, 255, 255);
+    color: black;
+    border: 2px;
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header nav button:hover {
+    background-color: #f4f4f4;
+}
+
+.header nav button:focus {
+    outline: black;
+    box-shadow: 0 0 0 px rgba(141, 140, 140, 1);
+}
