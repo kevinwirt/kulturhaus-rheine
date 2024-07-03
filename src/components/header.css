@@ -1,9 +1,9 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-.header {
+  }
+  
+  .header {
     background-color: rgb(255, 255, 255);
     padding: 20px;
     text-align: center;
@@ -11,31 +11,30 @@
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 10000;
-}
-
-.header nav {
+    z-index: 1000;
+  }
+  
+  nav {
     display: flex;
-    justify-content: center;
-    gap: 10px; /* Abstand zwischen den Buttons */
-}
-
-.header nav button {
-    background-color: rgba(255, 255, 255);
-    color: black;
-    border: 2px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  button {
     padding: 10px 20px;
-    font-size: 24px;
-    border-radius: 10px;
+    background-color: rgb(235, 16, 59);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.header nav button:hover {
-    background-color: #f4f4f4;
-}
-
-.header nav button:focus {
-    outline: black;
-    box-shadow: 0 0 0 px rgba(141, 140, 140, 1);
-}
+  }
+  
+  button:hover {
+    background-color: rgb(196, 16, 49);
+  }
+  
+  .language-switcher {
+    display: flex;
+    gap: 10px;
+  }
+  

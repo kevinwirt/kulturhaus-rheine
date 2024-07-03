@@ -1,9 +1,48 @@
-/* Globaler Reset */
-.App {
-  text-align: center;
-  height: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-main{
-  margin-top: 87px;
+body {
+  font-family: Arial, sans-serif;
+}
+
+.main {
+  padding-top: 87px; /* Höhe des Headers */
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-top: 100px;
+  }
+
+  .header nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .aktuelles, .events, .kurse, .kontakt {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .aktuelles, .events, .kurse, .kontakt {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+.footer {
+  padding: 10px 0;
+}
+
+.footer-content {
+  flex-direction: column;
+}
+
+.footer-section {
+  margin: 10px 0;
 }

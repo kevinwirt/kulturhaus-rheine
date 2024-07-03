@@ -18,7 +18,7 @@ const courses = [
     title: 'Course 3',
     description: 'Detailed description for course 3',
     details: 'Here are more details about course 3, such as schedule, prerequisites, and more.',
-    image: 'path/to/image3.jpg' // Replace with actual image paths
+    image: 'images/muster_herz.jpg' // Replace with actual image paths
   }
 ];
 
