@@ -1,40 +1,62 @@
-* {
-    margin: 0;
-    padding: 0;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.scroll-buttons {
+  display: flex;
+  gap: 10px; /* Abstand zwischen den Buttons anpassen */
+}
+
+.language-buttons {
+  display: flex;
+  gap: 10px; /* Abstand zwischen den Buttons anpassen */
+}
+
+.button {
+  padding: 8px 12px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #777;
+}
+
+.burger-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .scroll-buttons, .language-buttons {
+    display: none;
   }
-  
-  .header {
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.5);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+
+  .burger-menu {
+    display: block;
   }
-  
-  nav {
+
+  .mobile-menu {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
   }
-  
-  button {
-    padding: 10px 20px;
-    background-color: rgb(235, 16, 59);
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: rgb(196, 16, 49);
-  }
-  
-  .language-switcher {
-    display: flex;
-    gap: 10px;
-  }
-  
+}

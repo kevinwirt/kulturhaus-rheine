@@ -1,26 +1,55 @@
-import React from "react";
+import React, { useState } from 'react';
 import './header.css';
 
-function Header({ scrollToSection, aktuellesRef, eventsRef, kurseRef, kontaktRef, kontaktFormRef }) {
-  const changeLanguage = (language) => {
-    // Logik zum Ändern der Sprache
-    console.log(`Sprache geändert zu: ${language}`);
+const Header = ({ scrollToSection }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
-    <header className="header">
-      <nav>
-        <button onClick={() => scrollToSection(aktuellesRef)}>Aktuelles</button>
-        <button onClick={() => scrollToSection(eventsRef)}>Events</button>
-        <button onClick={() => scrollToSection(kurseRef)}>Kurse</button>
-        <button onClick={() => scrollToSection(kontaktRef)}>Kontakt</button>
-        <button onClick={() => scrollToSection(kontaktFormRef)}>Kontaktformular</button>
-        <div className="language-switcher">
-          <button onClick={() => changeLanguage('de')}>DE</button>
-          <button onClick={() => changeLanguage('ru')}>RU</button>
+    <div className="header">
+      <div className="scroll-buttons">
+        <button className="button" onClick={() => scrollToSection('aktuellesRef')}>
+          Aktuelles
+        </button>
+        <button className="button" onClick={() => scrollToSection('eventsRef')}>
+          Events
+        </button>
+        <button className="button" onClick={() => scrollToSection('kurseRef')}>
+          Kurse
+        </button>
+        <button className="button" onClick={() => scrollToSection('kontaktRef')}>
+          Kontakt
+        </button>
+      </div>
+      <div className="language-buttons">
+        <button className="button">DE</button>
+        <button className="button">EN</button>
+      </div>
+      <div className="burger-menu" onClick={toggleMenu}>
+        &#9776;
+      </div>
+      {menuOpen && (
+        <div className="mobile-menu">
+          <button className="button" onClick={() => { scrollToSection('aktuellesRef'); toggleMenu(); }}>
+            Aktuelles
+          </button>
+          <button className="button" onClick={() => { scrollToSection('eventsRef'); toggleMenu(); }}>
+            Events
+          </button>
+          <button className="button" onClick={() => { scrollToSection('kurseRef'); toggleMenu(); }}>
+            Kurse
+          </button>
+          <button className="button" onClick={() => { scrollToSection('kontaktRef'); toggleMenu(); }}>
+            Kontakt
+          </button>
+          <button className="button">DE</button>
+          <button className="button">EN</button>
         </div>
-      </nav>
-    </header>
+      )}
+    </div>
   );
 }
 
