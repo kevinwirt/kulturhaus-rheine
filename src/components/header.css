@@ -1,62 +1,68 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-}
-
-.scroll-buttons {
-  display: flex;
-  gap: 10px; /* Abstand zwischen den Buttons anpassen */
-}
-
-.language-buttons {
-  display: flex;
-  gap: 10px; /* Abstand zwischen den Buttons anpassen */
-}
-
-.button {
-  padding: 8px 12px;
-  background-color: #555;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #777;
-}
-
-.burger-menu {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  left: 20px;
-  background-color: #333;
-  padding: 10px;
-  border-radius: 4px;
-}
-
-@media (max-width: 768px) {
-  .scroll-buttons, .language-buttons {
-    display: none;
-  }
-
-  .burger-menu {
-    display: block;
-  }
-
-  .mobile-menu {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
   }
-}
+  
+  .left-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .scroll-buttons {
+    display: flex;
+    gap: 10px; /* Abstand zwischen den Buttons anpassen */
+  }
+  
+  .language-buttons {
+    display: flex;
+    gap: 10px; /* Abstand zwischen den Buttons anpassen */
+  }
+  
+  .button {
+    padding: 8px 12px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #777;
+  }
+  
+  .burger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 768px) {
+    .scroll-buttons {
+      display: none;
+    }
+  
+    .burger-menu {
+      display: block;
+    }
+  
+    .mobile-menu {
+      display: flex;
+    }
+  }
+  
